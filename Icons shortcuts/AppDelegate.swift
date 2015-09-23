@@ -1,10 +1,7 @@
 //
 //  AppDelegate.swift
 //  Icons shortcuts
-//
-//  Created by Michal Stringcode on 14/09/2015.
-//  Copyright © 2015 stringCode ltd. All rights reserved.
-//
+
 
 import UIKit
 
@@ -13,8 +10,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     enum ShortcutType: String {
-        case Torquiose = "reverse.domain.turquoise"
-        case Red = "reverse.domain.red"
+        case Green = "Green"
+        case Red =   "Red"
+    
+        
     }
     
     var window: UIWindow?
@@ -29,8 +28,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             handleShortCutItem(shortcutItem)
         }
         
-        //Return false incase application was lanched from shorcut to prevent
-        //application(_:performActionForShortcutItem:completionHandler:) from being called
+        let item1  = UIApplicationShortcutItem(type: ShortcutType.Green.rawValue, localizedTitle: "dynamic shortcut 1, green")
+        let item2  = UIApplicationShortcutItem(type: ShortcutType.Red.rawValue, localizedTitle: "dynamic shortcut 2, red")
+        let item3  = UIApplicationShortcutItem(type: ShortcutType.Green.rawValue, localizedTitle: "dynamic shortcut 3, green")
+        let item4  = UIApplicationShortcutItem(type: ShortcutType.Red.rawValue, localizedTitle: "dynamic shortcut 4, red")
+        let item5  = UIApplicationShortcutItem(type: ShortcutType.Green.rawValue, localizedTitle: "dynamic shortcut 5, green")
+        
+        application.shortcutItems = [item1, item2, item3, item4, item5]
+        
+        // Return false incase application was lanched from shorcut to prevent
+        // application(_:performActionForShortcutItem:completionHandler:) from being called
         return !launchedFromShortCut
     }
 
@@ -50,14 +57,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             rootNavigationViewController?.popToRootViewControllerAnimated(false)
             
             switch shortcutType {
-            case .Torquiose:
-                rootViewController?.performSegueWithIdentifier(toTurquoiseSeque, sender: nil)
+            case .Green:
+                rootViewController?.performSegueWithIdentifier(toGreenSeque, sender: nil)
                 handled = true
             case.Red:
                 rootViewController?.performSegueWithIdentifier(toRedSeque, sender: nil)
                 handled = true
             }
         }
+        
+        
+        // 这里还可以动态设置，关闭添加的快捷选项。
+        // UIApplication.sharedApplication().shortcutItems = nil
+        
         return handled
     }
 }

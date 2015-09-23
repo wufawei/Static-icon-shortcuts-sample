@@ -22,6 +22,29 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>green</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Go to green page</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Green</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>Green</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>circle</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Go to red page</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Red</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>Red</string>
+		</dict>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -42,29 +65,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIApplicationShortcutItems</key>
-	<array>
-		<dict>
-			<key>UIApplicationShortcutItemType</key>
-			<string>reverse.domain.turquoise</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Turquiose</string>
-			<key>UIApplicationShortcutItemSubtitle</key>
-			<string>Witness turquise in it&apos;s full glory</string>
-			<key>UIApplicationShortcutItemIconFile</key>
-			<string>squere</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemType</key>
-			<string>reverse.domain.red</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Turquiose</string>
-			<key>UIApplicationShortcutItemSubtitle</key>
-			<string>Witness red in it&apos;s full glory</string>
-			<key>UIApplicationShortcutItemIconFile</key>
-			<string>circle</string>
-		</dict>
 	</array>
 </dict>
 </plist>

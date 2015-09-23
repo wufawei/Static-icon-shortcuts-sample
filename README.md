@@ -152,8 +152,10 @@ app delegate中的application(_:performActionForShortcutItem:completionHandler:)
 
 但是只有item1, item2生效。
 
-相信你现在能够给你的App添加Quick Action支持了。
+测试发现，动态添加Quick Action成功之后，即使系统重启，下次打开依然有效。第一次全新安装（但是不运行App），只会显示静态的Quick Action。（如有谬误，敬请指正，谢谢）
 
+### 总结
+发挥你的创意，给你的App添加Quick Action支持，让用户获得更好的体验吧。
 
 #### 参考文档
 https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/Adopting3DTouchOniPhone/index.html#//apple_ref/doc/uid/TP40016543-CH1-SW1
